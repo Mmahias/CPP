@@ -12,7 +12,7 @@ class Form
     Form(std::string name, int grade_required, int grade_exec);
     Form(const Form &other);
     Form &operator=(const Form &op_other);
-    ~Form(void);
+    virtual ~Form(void);
 
     std::string getName(void) const;
     bool getSigned(void) const;
