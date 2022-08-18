@@ -96,11 +96,15 @@ Convert::operator int()
 Convert::operator float()
 {
     float f;
-
+    int tmp;
     try
     {
         f = std::stof(_arg);
-        std::cout.precision(_arg.length());
+        tmp = (int)f;
+        if (tmp == f)
+            std::cout.precision(1);
+        else
+            std::cout.precision(_arg.length());
         std::cout << std::fixed << "float: " << f << "f" << std::endl;
     }
     catch(std::invalid_argument const &e)
