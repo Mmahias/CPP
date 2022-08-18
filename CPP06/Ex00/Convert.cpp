@@ -38,7 +38,7 @@ Convert::operator char()
 {
     char c;
 
-    if (_arg == "-inff" || _arg == "+inff" || _arg == "nanf" || _arg == "_ifn" || _arg == "+ifn" || _arg == "nan")
+    if (_arg == "-inff" || _arg == "+inff" || _arg == "nanf" || _arg == "-ifn" || _arg == "+ifn" || _arg == "nan")
     {
         std::cout << "char : impossible" << std::endl;
         return (0);

@@ -10,7 +10,6 @@ void iter(T *tab, int len, void f(T &tab))
     {
         f(tab[i]);
     }
-    
 }
 
 #endif
