@@ -63,6 +63,11 @@ Convert::operator char()
             c = 0;
             std::cout << "char: non displayable" << std::endl;
         }
+        catch(std::out_of_range &e)
+        {
+            c = 0;
+            std::cout << "char: non displayable" << std::endl;
+        }
     }
     return (c);
     
