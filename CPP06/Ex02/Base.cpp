@@ -1,5 +1,6 @@
 #include "Base.hpp"
 #include <iostream>
+#include <cstdlib>
 
 Base::~Base(void)
 {

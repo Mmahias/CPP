@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -6,10 +8,12 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Aug 18 19:45:45 2022
+# Make data base, printed on Thu Aug 25 20:42:34 2022
 
 # Variables
 
+# 'override' directive
+GNUMAKEFLAGS := 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
@@ -21,95 +25,107 @@ DESKTOP_SESSION = ubuntu
 # environment
 XDG_SESSION_CLASS = user
 # environment
+SNAP_COMMON = /var/snap/code/common
+# environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
+# environment
+IM_CONFIG_PHASE = 1
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
-XAUTHORITY = /mnt/nfs/homes/mmahias/.Xauthority
+XAUTHORITY = /run/user/1000/gdm/Xauthority
 # environment
 GDMSESSION = ubuntu
 # environment
 XMODIFIERS = @im=ibus
 # makefile
-CURDIR := /mnt/nfs/homes/mmahias/CPP/CPP/CPP06
+CURDIR := /home/mj/42/CPP/CPP06
 # makefile
 SHELL = /bin/sh
 # environment
+SNAP_DATA = /var/snap/code/105
+# environment
 VTE_VERSION = 6003
 # environment
-VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"fr","availableLanguages":{"*":"fr"},"_languagePackId":"8a64477f85858ca31d1daacec93dba94.fr","_translationsConfigFile":"/home/mj/.config/Code/clp/8a64477f85858ca31d1daacec93dba94.fr/tcf.json","_cacheRoot":"/home/mj/.config/Code/clp/8a64477f85858ca31d1daacec93dba94.fr","_resolvedLanguagePackCoreLocation":"/home/mj/.config/Code/clp/8a64477f85858ca31d1daacec93dba94.fr/e4503b30fc78200f846c62cf8091b76ff5547662","_corruptedFile":"/home/mj/.config/Code/clp/8a64477f85858ca31d1daacec93dba94.fr/corrupted.info","_languagePackSupport":true}
 # environment
-_ = /usr/bin/code
-# environment
-JOURNAL_STREAM = 9:3588354
+JOURNAL_STREAM = 8:54741
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
+# environment
+SNAP_INSTANCE_NAME = code
+# environment
+SNAP_ARCH = amd64
 # makefile
 MAKEFILE_LIST := 
 # automatic
 @F = $(notdir $@)
 # environment
 GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/terminator.desktop
-# 'override' directive
-GNUMAKEFLAGS := 
 # environment
-MANDATORY_PATH = /usr/share/gconf/ubuntu.mandatory.path
+USERNAME = mj
 # environment
-XDG_DATA_DIRS = /usr/share/gnome:/usr/share/ubuntu:/mnt/nfs/homes/mmahias/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/38710/bus
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
-MANAGERPID = 622563
+MANAGERPID = 1685
 # environment
-VSCODE_CWD = /mnt/nfs/homes/mmahias/CPP/CPP/CPP06
+LESSOPEN = | /usr/bin/lesspipe %s
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session11
+VSCODE_CWD = /home/mj/42/CPP/CPP06
 # environment
-KRB5CCNAME = FILE:/tmp/krb5cc_38710_qbu0ex
+GSETTINGS_SCHEMA_DIR = /snap/code/105/usr/share/glib-2.0/schemas
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /mnt/nfs/homes/mmahias/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+PATH = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 # environment
-GPG_AGENT_INFO = /run/user/38710/gnupg/S.gpg-agent:0:1
+GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-LSCOLORS = Gxfxcxdxbxegedabagacad
+SESSION_MANAGER = local/mj-T14s:@/tmp/.ICE-unix/1956,unix/mj-T14s:/tmp/.ICE-unix/1956
 # environment
-SESSION_MANAGER = local/e2r11p6.clusters.42paris.fr:@/tmp/.ICE-unix/623385,unix/e2r11p6.clusters.42paris.fr:/tmp/.ICE-unix/623385
+XDG_RUNTIME_DIR = /run/user/1000
 # environment
-XDG_RUNTIME_DIR = /run/user/38710
+GDK_PIXBUF_MODULE_FILE = /home/mj/snap/code/common/.cache/gdk-pixbuf-loaders.cache
+# environment
+SNAP = /snap/code/105
+# environment
+SNAP_VERSION = e4503b30
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
+DISABLE_WAYLAND = 1
+# environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = e47d0a2db17d41c8a0f6ca066e7a35d8
+INVOCATION_ID = a70865b4768c4690a5aaced014d1ce18
+# environment
+GDK_PIXBUF_MODULEDIR = /snap/code/105/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
-# environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
-# environment
-XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/mmahias
 # environment
 LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
 # environment
 XDG_SESSION_DESKTOP = ubuntu
 # environment
-SSH_AUTH_SOCK = /run/user/38710/keyring/ssh
+SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 663503
+GIO_LAUNCHED_DESKTOP_FILE_PID = 3559
 # automatic
 %F = $(notdir $%)
 # environment
 DISPLAY = :0
 # environment
-PWD = /mnt/nfs/homes/mmahias/CPP/CPP/CPP06
+SNAP_INSTANCE_KEY = 
+# environment
+PWD = /home/mj/42/CPP/CPP06
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 623134
+SSH_AGENT_PID = 1881
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -117,17 +133,25 @@ GTK_MODULES = gail:atk-bridge
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
-HOME = /mnt/nfs/homes/mmahias
+HOME = /home/mj
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 VSCODE_CLI = 1
 # environment
-VSCODE_CODE_CACHE_PATH = /mnt/nfs/homes/mmahias/.config/Code/CachedData/3b889b090b5ad5793f524b5d1d39fda662b96a2a
+VSCODE_CODE_CACHE_PATH = /home/mj/.config/Code/CachedData/e4503b30fc78200f846c62cf8091b76ff5547662
 # environment
-LOGNAME = mmahias
+LOGNAME = mj
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
-ZSH = /mnt/nfs/homes/mmahias/.oh-my-zsh
+SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
+# environment
+SNAP_CONTEXT = XYAEDDwe-W2GyuKqy5JuZTyWzFVHmOEXv0cXQbasoDOFHGRDeJKv
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+SNAP_USER_COMMON = /home/mj/snap/code/common
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # environment
@@ -137,6 +161,8 @@ GNOME_DESKTOP_SESSION_ID = this-is-deprecated
 # environment
 MAKELEVEL := 0
 # environment
+SNAP_REAL_HOME = /home/mj
+# environment
 COLORTERM = truecolor
 # default
 MAKE = $(MAKE_COMMAND)
@@ -145,27 +171,27 @@ MAKECMDGOALS := all
 # environment
 QT_IM_MODULE = ibus
 # environment
-SHLVL = 2
+SNAP_USER_DATA = /home/mj/snap/code/105
 # environment
-IM_CONFIG_PHASE = 1
+SHLVL = 1
+# environment
+GNOME_SHELL_SESSION_MODE = ubuntu
 # default
 MAKE_VERSION := 4.2.1
 # environment
-USER = mmahias
+USER = mj
+# environment
+SNAP_REVISION = 105
 # makefile
 .DEFAULT_GOAL := 
 # environment
 XDG_CURRENT_DESKTOP = Unity
-# environment
-LIBVIRT_DEFAULT_URI = qemu:///system
-# environment
-LESS = -R
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
 MAKE_COMMAND := make
 # environment
-OLDPWD = /mnt/nfs/homes/mmahias/CPP/CPP
+OLDPWD = /home/mj/42/CPP
 # environment
 TERMINATOR_DBUS_PATH = /net/tenshu/Terminator2
 # default
@@ -173,17 +199,13 @@ TERMINATOR_DBUS_PATH = /net/tenshu/Terminator2
 # automatic
 *F = $(notdir $*)
 # environment
-XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
-# environment
-VSCODE_IPC_HOOK = /run/user/38710/vscode-89072920-1.69.2-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-2fbd0d8f-1.70.2-main.sock
 # makefile
 MAKEFLAGS = pqrR
 # environment
 MFLAGS = -pqrR
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
-# environment
-MAIL = mmahias@student.42.fr
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
@@ -192,14 +214,14 @@ GDK_BACKEND = x11
 +F = $(notdir $+)
 # environment
 QT_ACCESSIBILITY = 1
-# environment
-DEFAULTS_PATH = /usr/share/gconf/ubuntu.default.path
 # default
 MAKEFILES := 
+# environment
+SNAP_COOKIE = XYAEDDwe-W2GyuKqy5JuZTyWzFVHmOEXv0cXQbasoDOFHGRDeJKv
 # automatic
 <F = $(notdir $<)
 # environment
-PAGER = less
+SNAP_NAME = code
 # environment
 LC_ALL = C
 # environment
@@ -209,7 +231,11 @@ GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # default
 SUFFIXES := 
 # environment
+SNAP_REEXEC = 
+# environment
 CHROME_DESKTOP = code-url-handler.desktop
+# environment
+WINDOWPATH = 2
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # environment
@@ -223,13 +249,11 @@ TERM = xterm-256color
 # environment
 TERMINATOR_DBUS_NAME = net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873
 # environment
-DOCKER_HOST = unix:///run/user/38710/docker.sock
+VSCODE_PID = 21082
 # environment
-VSCODE_PID = 670742
-# environment
-TERMINATOR_UUID = urn:uuid:bad8e058-f39c-46d2-8085-b1f9de20d271
+TERMINATOR_UUID = urn:uuid:d31213a6-6978-458f-b490-7162426b0c29
 # variable set hash-table stats:
-# Load=109/1024=11%, Rehash=0, Collisions=13/131=10%
+# Load=120/1024=12%, Rehash=0, Collisions=18/142=13%
 
 # Pattern-specific Variable Values
 
@@ -237,7 +261,7 @@ TERMINATOR_UUID = urn:uuid:bad8e058-f39c-46d2-8085-b1f9de20d271
 
 # Directories
 
-# . (device 58, inode 195707326): 6 files, no impossibilities.
+# . (device 66309, inode 12453264): 6 files, no impossibilities.
 
 # 6 files, no impossibilities in 1 directories.
 
@@ -277,14 +301,12 @@ makefile:
 # Not a target:
 GNUmakefile:
 #  Implicit rule search has been done.
+ 
 #  File does not exist.
 #  File has been updated.
 #  Failed to be updated.
 
 # files hash-table stats:
- 
-make: *** No rule to make target 'all'.  Stop.
-
 # Load=6/1024=1%, Rehash=0, Collisions=0/15=0%
 # VPATH Search Paths
 
@@ -298,6 +320,6 @@ make: *** No rule to make target 'all'.  Stop.
 # strcache performance: lookups = 17 / hit rate = 17%
 # hash-table stats:
 # Load=14/8192=0%, Rehash=0, Collisions=1/17=6%
-# Finished Make data base on Thu Aug 18 19:45:45 2022
+# Finished Make data base on Thu Aug 25 20:42:34 2022
 
  
