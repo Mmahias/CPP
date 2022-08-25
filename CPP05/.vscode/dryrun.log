@@ -1,0 +1,6 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/mj/42/CPP/CPP05'
+make: Leaving directory '/home/mj/42/CPP/CPP05'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+

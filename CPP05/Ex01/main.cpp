@@ -2,30 +2,28 @@
 #include "Form.hpp"
 #include <iostream>
 
-using namespace std;
-
 int main(void)
 {
     //FORM LOW
     try
     {
-        cout << "Low Exception" << endl;
+        std::cout << "Low Exception" << std::endl;
         Form low("LowLow", 155, 155);
     }
     catch(const std::exception& e)
     {
-        cout << e.what() << '\n';
+        std::cout << e.what() << '\n';
     }
 
     //HIGH
     try
     {
-        cout << "High Exception" << endl;
+        std::cout << "High Exception" << std::endl;
         Form high("HighHigh", 0, 0);
     }
     catch(const std::exception& e)
     {
-        cout << e.what() << '\n';
+        std::cout << e.what() << '\n';
     }
 
     //BE SIGNED => TRUE
@@ -40,24 +38,24 @@ int main(void)
     noob.signForm(form_1);
 
     // SURCHARGE OPERATOR <<
-    cout << margaux << endl;
-    cout << form_1 << endl;
+    std::cout << margaux << std::endl;
+    std::cout << form_1 << std::endl;
 
     // Copy Bureaucrat
     Bureaucrat cp(margaux);
     Bureaucrat copy;
     
-    cout << cp << endl;
+    std::cout << cp << std::endl;
     copy = margaux;
-    cout << copy << endl;
+    std::cout << copy << std::endl;
 
     // Copy Form
     Form cp_f(form_1);
     Form copy_1;
 
-    cout << cp_f << endl;
+    std::cout << cp_f << std::endl;
     copy_1 = form_1;
-    cout << copy_1 << endl;
+    std::cout << copy_1 << std::endl;
     
     return (0);
 }

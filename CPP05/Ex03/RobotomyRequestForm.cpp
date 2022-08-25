@@ -1,18 +1,19 @@
 #include "RobotomyRequestForm.hpp"
 #include "Form.hpp"
 #include <iostream>
+#include <cstdlib>
 
-RobotomyRequestForm::RobotomyRequestForm() : _target("RobotomyForm Random target"), Form("Default RobotomyForm", 72, 45)
+RobotomyRequestForm::RobotomyRequestForm() : Form("Default RobotomyForm", 72, 45), _target("RobotomyForm Random target")
 {
     std::cout << "RobotomyForm Default Constructor called" << std::endl;
 }
 
-RobotomyRequestForm::RobotomyRequestForm(std::string target) : _target(target), Form("Argument RobotomyForm", 72, 45)
+RobotomyRequestForm::RobotomyRequestForm(std::string target) : Form("Argument RobotomyForm", 72, 45), _target(target)
 {
     std::cout << "RobotomyForm Argument Constructor called" << std::endl;
 }
 
-RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &other) : _target(other.getTarget()), Form(other.getName(), other.getGradeRequired(), other.getGradeExec())
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &other) : Form(other.getName(), other.getGradeRequired(), other.getGradeExec()), _target(other.getTarget())
 {
     std::cout << "RobotomyForm Copy Constructor called" << std::endl;
     *this = other;

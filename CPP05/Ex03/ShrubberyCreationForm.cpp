@@ -3,17 +3,17 @@
 #include <iostream>
 #include <fstream>
 
-ShruberryCreationForm::ShruberryCreationForm() : _target("Shruberry Random Target"), Form("Default ShruberryForm", 145, 137)
+ShruberryCreationForm::ShruberryCreationForm() : Form("Default ShruberryForm", 145, 137), _target("Shruberry Random Target")
 {
     std::cout << "ShruberryCreationForm Default Constructor called" << std::endl;
 }
 
-ShruberryCreationForm::ShruberryCreationForm(std::string target) : _target(target), Form("Argument ShruberryForm", 145, 137)
+ShruberryCreationForm::ShruberryCreationForm(std::string target) : Form("Argument ShruberryForm", 145, 137), _target(target)
 {
     std::cout << "ShruberryCreattionForm Argument Constructor called" << std::endl;
 }
 
-ShruberryCreationForm::ShruberryCreationForm(const ShruberryCreationForm &other) : _target(other.getTarget()), Form(other.getName(), other.getGradeRequired(), other.getGradeExec())
+ShruberryCreationForm::ShruberryCreationForm(const ShruberryCreationForm &other) : Form(other.getName(), other.getGradeRequired(), other.getGradeExec()), _target(other.getTarget())
 {
     std::cout << "ShruberryCreationForm Copy Constructor called" << std::endl;
     *this = other;
@@ -42,8 +42,9 @@ void ShruberryCreationForm::execute(const Bureaucrat &executor) const
         throw (Form::GradeTooLowException());
     else
     {
-        std::string name = ".shruberry";
-        std::ofstream file1((this->_target + name), std::ios::out);
+        std::string name = this->_target + ".shruberry";
+        std::ofstream file1;
+        file1.open(name.c_str(), std::ios::out);
 
         if (!file1 || !file1.is_open())
         {

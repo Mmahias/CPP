@@ -2,16 +2,14 @@
 #include "Bureaucrat.hpp"
 #include <iostream>
 
-using namespace std;
-
-Form::Form() : _name("Random_Form"), _grade_required(150), _grade_exec(1), _signed(0)
+Form::Form() : _name("Random_Form"), _signed(0), _grade_required(150), _grade_exec(1)
 {
-    cout << "Form Default Constructor called" << endl;
+    std::cout << "Form Default Constructor called" << std::endl;
 }
 
-Form::Form(std::string name, int grade_required, int grade_exec) : _name(name), _grade_required(grade_required), _grade_exec(grade_exec), _signed(0)
+Form::Form(std::string name, int grade_required, int grade_exec) : _name(name), _signed(0), _grade_required(grade_required), _grade_exec(grade_exec)
 {
-    cout << "Form Arguments Constructor called" << endl;
+    std::cout << "Form Arguments Constructor called" << std::endl;
     if (grade_required > 150 || grade_exec > 100)
         throw Form::GradeTooLowException();
     else if (grade_required < 1 || grade_exec < 1)
@@ -22,13 +20,13 @@ Form::Form(std::string name, int grade_required, int grade_exec) : _name(name), 
 
 Form::Form(const Form &other) : _grade_required(other.getGradeRequired()), _grade_exec(other.getGradeExec())
 {
-    cout << "Form Copy Constructor called" << endl;
+    std::cout << "Form Copy Constructor called" << std::endl;
     *this = other;
 }
 
 Form &Form::operator=(const Form &op_other)
 {
-    cout << "Form Copy Assignement called" << endl;
+    std::cout << "Form Copy Assignement called" << std::endl;
     this->_name = op_other.getName();
     this->_signed = op_other.getSigned();
     return (*this);
@@ -36,7 +34,7 @@ Form &Form::operator=(const Form &op_other)
 
 Form::~Form(void)
 {
-    cout << "Form Destructor called" << endl;
+    std::cout << "Form Destructor called" << std::endl;
 }
 
 std::string Form::getName(void) const
@@ -69,7 +67,7 @@ void Form::beSigned(class Bureaucrat &current)
 
 std::ostream &operator<<(std::ostream &out, const Form &other)
 {
-    out << "Name: " << other.getName() << " , Grade Required: " << other.getGradeRequired() << " , Grade Exec: " << other.getGradeExec() << " and Signed: " << other.getSigned() << endl;
+    out << "Name: " << other.getName() << " , Grade Required: " << other.getGradeRequired() << " , Grade Exec: " << other.getGradeExec() << " and Signed: " << other.getSigned() << std::endl;
     return (out);
 }
 

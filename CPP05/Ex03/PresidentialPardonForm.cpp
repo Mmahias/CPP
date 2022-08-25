@@ -2,17 +2,17 @@
 #include "Form.hpp"
 #include <iostream>
 
-PredisentialPardonForm::PredisentialPardonForm() : _target("Presidential Pardon Random Target"), Form("Default Presidential Pardon", 25, 5)
+PredisentialPardonForm::PredisentialPardonForm() : Form("Default Presidential Pardon", 25, 5), _target("Presidential Pardon Random Target")
 {   
     std::cout << "PresidentialPardonForm Default Constructor called" << std::endl;
 }
 
-PredisentialPardonForm::PredisentialPardonForm(std::string target) : _target(target), Form("Argument Presidential Pardon", 25, 5)
+PredisentialPardonForm::PredisentialPardonForm(std::string target) : Form("Argument Presidential Pardon", 25, 5), _target(target)
 {
     std::cout << "PresidentialPardonForm Argument Constructor called" << std::endl;
 }
 
-PredisentialPardonForm::PredisentialPardonForm(const PredisentialPardonForm &other) : _target(other.getTarget()),  Form(other.getName(), other.getGradeRequired(), other.getGradeExec())
+PredisentialPardonForm::PredisentialPardonForm(const PredisentialPardonForm &other) : Form(other.getName(), other.getGradeRequired(), other.getGradeExec()), _target(other.getTarget())
 {
     std::cout << "PresidentialPardonForm Copy Constructor called" << std::endl;
     *this = other;
