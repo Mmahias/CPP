@@ -11,7 +11,7 @@ CFLAGS	= -Wall -Werror -Wextra -std=c++98 -g
 RM		= rm -rf
 
 .cpp.o:
-		${CC} -c $< -o ${<:.cpp=.o}
+		${CC} ${CFLAGS} -c $< -o ${<:.cpp=.o}
 
 all:	$(NAME)
 

@@ -52,7 +52,7 @@ int Span::shortestSpan(void)
         int result[_v.size()];
         std::adjacent_difference(vector.begin(), vector.end(), result);
         shrt = result[0];
-        for (int i = 1; i < _v.size() ; i++)
+        for (int i = 1; i < (int)_v.size() ; i++)
         {
             if (shrt > result[i])
                 shrt = result[i];
@@ -68,8 +68,8 @@ int Span::longestSpan(void)
         throw std::exception();
     else
     {
-        auto max = std::max_element(_v.begin(), _v.end());
-        auto min = std::min_element(_v.begin(), _v.end());
+        std::vector<int>::iterator max = std::max_element(_v.begin(), _v.end());
+        std::vector<int>::iterator min = std::min_element(_v.begin(), _v.end());
         lng = (*max  - *min);
     }
     return (lng);

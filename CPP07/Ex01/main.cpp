@@ -1,6 +1,5 @@
 #include "iter.hpp"
 #include <iostream>
-#include <array>
 
 template <typename T>
 void ft_printf(T &t)
