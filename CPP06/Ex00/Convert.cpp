@@ -1,5 +1,7 @@
 #include "Convert.hpp"
 #include <iostream>
+#include <sstream>
+#include <stdlib.h>
 
 Convert::Convert() : _arg("Random")
 {
@@ -48,7 +50,8 @@ Convert::operator char()
         try
         {
 
-            int nb = stoi(_arg);
+            //int nb = stoi(_arg);
+            int nb = atoi(_arg.c_str());
             c = static_cast<char>(nb);
             if (isprint(c))
                 std::cout << "char: " << c << std::endl;
@@ -79,10 +82,17 @@ Convert::operator char()
 Convert::operator int()
 {
     int i;
+
+    if (_arg == "-inff" || _arg == "+inff" || _arg == "nanf" || _arg == "-ifn" || _arg == "+ifn" || _arg == "nan")
+    {
+        std::cout << "int : impossible" << std::endl;
+        return (0);
+    }
     
     try
     {
-        i = std::stoi(_arg);
+        //i = std::stoi(_arg);
+        i = atoi(_arg.c_str());
         std::cout << "int: " << i << std::endl;
     }
     catch(std::invalid_argument const &e)
@@ -104,7 +114,8 @@ Convert::operator float()
     int tmp;
     try
     {
-        f = std::stof(_arg);
+        //f = std::stof(_arg);
+        f = atof(_arg.c_str());
         tmp = (int)f;
         if (tmp == f)
             std::cout.precision(1);
@@ -131,7 +142,8 @@ Convert::operator double()
 
     try
     {
-        d = std::stod(_arg);
+        //d = std::stod(_arg);
+        d = std::strtod(_arg.c_str(), 0);
         
         std::cout << std::fixed << "double: " << d << std::endl;
     }

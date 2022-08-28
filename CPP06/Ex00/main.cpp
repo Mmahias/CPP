@@ -17,11 +17,18 @@ int main(int argc, char **argv)
     {
         std::string arg = argv[1];
         Convert conv(arg);
-
+        
         char c = conv;
         int i = conv;
         float f = conv;
         double d = conv;
+
+        (void) c;
+        (void) i;
+        (void) f;
+        (void) d;
+
+        std::cout << std::endl;
     }
     return (0);
 }
