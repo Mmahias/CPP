@@ -38,7 +38,7 @@ int main()
     v.push_back(15);
     v.push_back(37);
     v.push_back(123);
-    v.push_back(-12);
+    v.push_back(12);
     v.push_back(52);
 
     sprange.addMultiNumbers(v.begin(), v.end());
